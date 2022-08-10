@@ -56,3 +56,17 @@ body {
   box-shadow: 0 0 20px white;
   background-color: grey;
 }
+.footer{
+  height:90%;
+  width:30%;
+  border: 10% solid #fff;
+  border-radius: 40%;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  margin: 2%;
+  color:white;
+  background-color: #011F3F;
+}
+.footer :hover{
+  background-color: grey;
+}
