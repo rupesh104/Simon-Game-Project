@@ -4,6 +4,7 @@ var userClickedPattern=[];
 var level=0,score=0;
 
 $(document).on("keypress",levelHandler);
+$(".footer").on("click",levelHandler);
 
 function levelHandler(){
     if(level===0)
@@ -13,6 +14,7 @@ function levelHandler(){
 $(".btn").on("click",handler);
 
 function handler(){
+    if(level!==0){
     var userChosenColour=this.id;
     var userChosenColourId="#" + String(userChosenColour);
     userClickedPattern.push(String(userChosenColour));
@@ -20,6 +22,7 @@ function handler(){
     playSound(userChosenColour);
     animatePress(userChosenColourId);
     checkAnswer(userClickedPattern.length-1);
+    }
 }
 
 function nextSequence(){
@@ -80,5 +83,7 @@ function gameOver() {
     gamePattern.length=0;
     userClickedPattern.length=0;
 }
+
+
 
 
